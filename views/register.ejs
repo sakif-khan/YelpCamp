@@ -4,18 +4,47 @@
     <h1 style="text-align: center">Sign Up</h1>
     <div style="width: 30%; margin: 25px auto;">
         <form action="/register" method="post">
+            
+            <!--username-->
             <div class="form-group">
                 <input class="form-control" type="text" name="username" placeholder="username">
             </div>
+            
+            <!--password-->
             <div class="form-group">
                 <input class="form-control" type="password" name="password" placeholder="password">
             </div>
+            
+            <!--first name-->
             <div class="form-group">
-                <input class="form-control" type="text" name="adminCode" placeholder="Admin code">
+                <input class="form-control" type="text" name="firstName" placeholder="first name">
             </div>
+            
+            <!--last name-->
+            <div class="form-group">
+                <input class="form-control" type="text" name="lastName" placeholder="last name">
+            </div>
+            
+            <!--email-->
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="email">
+            </div>
+            
+            <!--avatar-->
+            <div class="form-group">
+                <input class="form-control" type="text" name="avatar" placeholder="avatar url">
+            </div>
+            
+            <!--admin code-->
+            <div class="form-group">
+                <input class="form-control" type="text" name="adminCode" placeholder="admin code">
+            </div>
+            
+            <!--submit button-->
             <div class="form-group">
                 <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
             </div>
+            
         </form>
         <a href="/campgrounds">Go Back</a>
     </div>

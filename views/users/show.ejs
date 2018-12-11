@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1>
+            <%= user.firstName + " " + user.lastName %>
+        </h1>
+        <div class="thumbnail">
+            <img src="<%= user.avatar %>" alt="user profile image">
+            <div class="caption">
+                <a href="mailto:<%= user.email %>">
+                    <%= user.email %>
+                </a>
+            </div>
+        </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eros massa, posuere quis lacus eu, efficitur lacinia ante. Etiam dictum erat vel odio elementum, et eleifend dolor tempus. Donec fermentum, libero ac interdum placerat, magna tellus efficitur mauris, eu imperdiet nulla nibh ac purus. Ut accumsan odio vitae elit placerat, eu consequat nulla faucibus. Maecenas egestas feugiat ligula, ut molestie nisi viverra in. Ut placerat ante sit amet dui eleifend, id gravida justo consequat. Fusce massa est, pulvinar nec dolor et, euismod ullamcorper magna. Fusce non iaculis tellus, sit amet posuere nulla. Sed dictum felis vitae augue tempus, et vulputate massa elementum. Fusce placerat eleifend urna, at semper leo ornare eget.
+    </div>
+    <div class="col-md-8">
+        <h3><%= user.username %>'s campgrounds: </h3>
+        <ul>
+            <% campgrounds.forEach(function(campground){ %>
+                <li>
+                    <a href="/campgrounds/<%= campground.id %>">
+                        <%= campground.name %>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<% include ../partials/footer %>
